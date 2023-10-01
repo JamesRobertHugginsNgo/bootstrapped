@@ -26,10 +26,12 @@ import Tab from 'bootstrap/js/src/tab.js';
 import Toast from 'bootstrap/js/src/toast.js';
 import setupTooltip from './tooltip.js';
 
-export default function (className) {
-	const rootElement = document.createElement('div');
-	rootElement.classList.add(className);
-	document.body.append(rootElement);
+export default function (rootElement) {
+	if (typeof rootElement === 'string') {
+		const element = document.body.appendChild(document.createElement('div'));
+		element.classList.add(rootElement);
+		rootElement = element;
+	}
 
 	return {
 		Alert,

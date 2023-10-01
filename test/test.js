@@ -16,10 +16,10 @@ const toastTrigger = document.getElementById('liveToastBtn');
 const toastLiveExample = document.getElementById('liveToast');
 
 if (toastTrigger) {
-  const toastBootstrap = Bootstrap.Toast.getOrCreateInstance(toastLiveExample);
-  toastTrigger.addEventListener('click', () => {
-    toastBootstrap.show();
-  });
+	const toastBootstrap = Bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+	toastTrigger.addEventListener('click', () => {
+		toastBootstrap.show();
+	});
 }
 
 // Tooltips
