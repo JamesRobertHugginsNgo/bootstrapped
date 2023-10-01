@@ -1,0 +1,32 @@
+@mixin horizontal-list($prefix) {
+	@keyframes #{$prefix}progress-bar-stripes {
+		0% {
+			background-position-x: 1rem;
+		}
+	}
+	@keyframes #{$prefix}spinner-border {
+		to {
+			transform: rotate(360deg) /* rtl:ignore */;
+		}
+	}
+	@keyframes #{$prefix}spinner-grow {
+		0% {
+			transform: scale(0);
+		}
+		50% {
+			opacity: 1;
+			transform: none;
+		}
+	}
+	@keyframes #{$prefix}placeholder-glow {
+		50% {
+			opacity: 0.2;
+		}
+	}
+	@keyframes #{$prefix}placeholder-wave {
+		100% {
+			mask-position: -200% 0%;
+		}
+	}
+
+}
